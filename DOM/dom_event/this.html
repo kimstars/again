@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <!-- stylesheets -->
+    <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.3/css/select2.min.css">
+
+
+    <!-- scripts -->
+    <script type="text/javascript" src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
+    <script type="text/javascript"
+        src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.3/js/select2.min.js"></script>
+
+    <script>
+        $(function () {
+            // turn the element to select2 select style
+            $('.select2').select2({
+                placeholder: "Select a state"
+            });
+
+            $('.select2').on('change', function () {
+                var data = $(".select2 option:selected").text();
+                console.log(data);
+                $("#test").val(data);
+            })
+        });
+
+
+
+    </script>
+</head>
+
+<body>
+
+    <p>select2 select box:</p>
+    <p>
+        <select class="select2" style="width:300px">
+            <option>    </option>
+            <option value="AL">Alabama</option>
+            <option value="VT">Vermont</option>
+            <option value="VA">Virginia</option>
+            <option value="WV">West Virginia</option>
+        </select>
+    </p>
+
+    <input type="text" id="test">
+
+</body>
+
+</html>

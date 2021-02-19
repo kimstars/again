@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>test list select</title>
+
+
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script>
+        $(document).ready(function(){
+                $('body').on('change', '#select', function() {
+                    $('#show_selected').val(this.value);
+                });
+        });
+        
+    </script>
+
+
+
+</head>
+
+<body>
+    <p>select your car</p>
+<!-- 
+    <datalist id="cars">
+        <option>Volvo</option>
+        <option>Saab</option>
+        <option>Mercedes</option>
+        <option>Audi</option>
+    </datalist> -->
+
+    <select  id="select">
+        <option value="">Select one </option>
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+    </select>
+    <br><br>
+
+    <input type="text" id="show_selected">
+
+</body>
+
+</html>
