@@ -33,3 +33,4 @@ Person.prototype.info1 = function(address) {
 
 person1.info1("ha long");
 
+var exe = 0;
