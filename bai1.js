@@ -16,7 +16,6 @@ function hieu(x = 10, y = 9){
 
 
 
-//kiet dep trai ghe luon
 
 
 
